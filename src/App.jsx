@@ -1,27 +1,38 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import { RouterProvider, createBrowserRouter } from "react-router-dom"
 // Layout
-import RootLayout from "./layout/RootLayout"
+import RootLayout from './layout/RootLayout'
 // Pages
 import Home from './pages/Home'
-import TestPage from './pages/TestPage'
+import Cristiano from './pages/Cristiano'
+import Neymar from './pages/Neymar'
+import Football from './pages/Football'
+
+
 function App() {
   const routes = createBrowserRouter([
-  {
-    path: '/',
-    element: <RootLayout />,
-    children: [
-      {
-        index: true,
-        element: <Home />
-      },
-      {
-        path: '/test',
-        element: <TestPage />
-      }
-    ]
-  }
+    {
+      path: '/',
+      element: <RootLayout />,
+      children: [
+        {
+          index: true,
+          element: <Home />
+        },
+        {
+          path: '/g.o.a.t',
+          element: <Cristiano />
+        },
+        {
+          path: '/neymar',
+          element: <Neymar />
+        },
+        {
+          path: '/football',
+          element: <Football />
+        }
+      ]
+    }
   ])
-
   return (
     <RouterProvider router={routes}></RouterProvider>
   )

@@ -9,6 +9,7 @@ html{
 body {
   height: 100%;
   font-family: 'Titillium Web', sans-serif;
+  color: #fff;
 }
 #root{
   height: inherit;
@@ -16,13 +17,15 @@ body {
 @layer {
   .cite-container {
       @apply   max-w-[1580px] mx-auto  px-5
+  };
+  .nav{
+    @apply  bg-slate-800
+  };
+  body{
+    @apply bg-slate-700
   }
-  .navbar-comtainer{
-    @apply   max-w-[1510px] mx-auto  px-5
+  .active{
+    @apply bg-slate-700 
+    rounded-t-[10px]
   }
-}
-.active{
-  color: black;
-  font-weight: 700;
-  border-bottom: 2px solid #000;
 }
